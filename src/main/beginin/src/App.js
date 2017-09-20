@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
-import MenuBarTop from './components/MenuBarTop';
 import { loadTheme } from 'office-ui-fabric-react/lib/Styling';
-import logo from './logo.svg';
-import Lista from './Lista';
+
+
+import MenuBarTop from './components/MenuBarTop';
+import LoginForm from './components/LoginForm';
+import MenuCircles from './components/MenuCircles';
+import LoanSupports from './components/LoanSupports';
+// import logo from './logo.svg';
 import './App.css';
 
 
@@ -13,40 +16,90 @@ loadTheme({
   },
 });
 
-const API_PATH = '/nayd/rubrics';
+// const API_PATH = '/nayd/';
+
+const compnList = {
+  circles: MenuCircles,
+  supports: LoanSupports,
+};
+
 class App extends Component {
+
   constructor(props) {
     super(props);
-    this.state = { data: [] };
-    this.callApi = this.callApi.bind(this);
+    this.state = {
+      user: '',
+      data: [],
+      logged: false,
+      progress: false,
+      compn: 'circles',
+    };
+    this.authenticate = this.authenticate.bind(this);
+    this.changeView = this.changeView.bind(this);
+    this.logout = this.logout.bind(this);
+  }
+
+  changeView(compn) {
+    this.setState({ compn });
   }
 	  //  componentDidMount() {
 	  //       client({ method: 'GET', path: '/api/employees' }).done((response) => {
 	  //           this.setState({ employees: response.entity._embedded.employees });
 	  //       });
-	  //   }
-  callApi(event) {
-	  event.preventDefault();
-	  fetch(API_PATH)
-		  .then(response => response.json())
-		  .then((txt) => {
-      //  console.log(txt);
-          this.setState({ data: txt._embedded.rubrics });
-      });
+    //   }
+  logout() {
+    this.setState({ user: '', logged: false });
   }
+    // authentification
+  authenticate(email, pass) {
+    this.setState({ progress: true });
+
+    // setTimeout(() => {
+    //   console.log(pass);
+    //   this.setState({ user: email, logged: true, progress: false });
+    // }, 2000);
+
+    fetch('/login', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'X-Custom-Header': 'ProcessThisImmediately',
+      },
+      body: `username=${email}&password=${pass}`,
+    })
+    .then((resp) => {
+      if (resp.status === 200) {
+        this.setState({ user: email, logged: true });
+      }
+    })
+    .catch((raison) => { console.log(raison); });
+
+                   /* body: JSON.stringify({
+                      username: email,
+                      password: pass,
+                    }), */
+  }
+
   render() {
     // const rows = [];
-
+    const logged = this.state.logged;
+    const Compn = compnList[this.state.compn];
     return (
       <div className="App">
-        <MenuBarTop />
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <DefaultButton onClick={this.callApi}>show the rest is runnnnniiing</DefaultButton>
-
-        <Lista elems={this.state.data} />
+        <header>
+          {logged && <MenuBarTop
+            changeCompn={this.changeView}
+            logout={this.logout}
+            userName={this.state.user}
+          />}
+        </header>
+        <section>
+          {!logged && <LoginForm send={this.authenticate} progress={this.state.progress} />}
+          { logged && <Compn changeCompn={this.changeView} />}
+        </section>
+        <footer>
+          <div className="status-bar">helloow</div>
+        </footer>
       </div>
     );
   }

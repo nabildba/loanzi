@@ -1,78 +1,105 @@
 import React, { Component } from 'react';
 import { CommandBar } from 'office-ui-fabric-react/lib/CommandBar';
+import { AnimationClassNames } from 'office-ui-fabric-react/lib/Styling';
 
 export default class MenuBarTop extends Component {
     constructor(props) {
         super(props);
-        this.state = { data: [] };
+        this.state = { userName: 'user' };
         this.getCommands = this.getCommands.bind(this);
-        // this.goHome = this.goHome.bind(this);
+        this.goHome = this.goHome.bind(this);
+        this.getFariItems = this.getFariItems.bind(this);
+    }
+    componentDidMount() {
+        // todo
+        // get username
     }
     getCommands() {
+        const { changeCompn } = this.props;
         return [
             {
                 key: 'home',
                 name: 'Acceuil',
-                iconProps: { iconName: 'BarChart4' },
-                onClick: this.goHome,
+                iconProps: { iconName: 'Home' },
+                onClick: () => changeCompn('circles'),
             },
             {
-                key: 'contact',
-                name: 'contactez nous',
-                iconProps: { iconName: 'AddTo' },
-                onClick: this.goHome,
+                key: 'k7',
+                name: 'Supports/K7',
+                iconProps: { iconName: 'Video' },
+                onClick: () => changeCompn('supports'),
             },
             {
-                key: 'param',
-                name: 'paramétres',
-                iconProps: { iconName: 'FerrySolid' },
-                onClick: this.goHome,
+                key: 'archive',
+                name: 'Archives',
+                iconProps: { iconName: 'Archive' },
+                onClick: () => changeCompn('archives'),
+            },
+            {
+                key: 'dupli',
+                name: 'Duplications',
+                iconProps: { iconName: 'ImageDiff' },
+                onClick: () => changeCompn('duplication'),
             },
         ];
     }
     getFariItems() {
         return [
             {
-                key: 'home0',
-                name: 'Acceuil',
-                icon: 'BarChart4',
+                key: 'history',
+                name: 'Historique',
+                icon: 'Chart',
+                onClick: this.goHome,
+            },
+            {
+                key: 'lang',
+                name: 'Langue',
+                icon: 'Flag',
+                subMenuProps: {
+                    items: [
+                        {
+                            key: 'ar',
+                            name: 'العربية',
+                        },
+                        {
+                            key: 'fr',
+                            name: 'Français',
+                        },
+
+                    ],
+                },
+            },
+            {
+                key: 'profile',
+                name: this.props.userName,
+                iconProps: { iconName: 'Contact' },
                 subMenuProps: {
                 items: [
                     {
-                        key: 'bla1',
-                        name: 'reload',
-                        iconProps: { iconName: 'ReplyMirrored' },
+                        key: 'reset',
+                        name: 'Changer mot de passe',
+                        iconProps: { iconName: 'Unlock' },
                     },
                     {
-                        key: 'bla2',
+                        key: 'deco',
                         name: 'se deconnecter',
-                        icon: 'RemoveFilter',
+                        iconProps: { iconName: 'SignOut' },
+                        onClick: () => this.props.logout(),
                     },
 
                 ],
             } },
-            {
-                key: 'contact0',
-                name: '',
-                icon: 'AddTo',
-                onClick: this.goHome,
-            },
-            {
-                key: 'param0',
-                name: '',
-                icon: 'FerrySolid',
-                onClick: this.goHome,
-            },
+
         ];
     }
-    goHome() {
-        console.log('clickes');
+    goHome(compn) {
+        console.log(compn);
     }
     render() {
         return (
           <CommandBar
-            className="ms-slideDownIn10"
-            isSearchBoxVisible="true"
+            className={AnimationClassNames.slideDownIn20}
+            isSearchBoxVisible={false}
             searchPlaceholderText="Recherche ..."
             elipisisAriaLabel="More options"
             items={this.getCommands()}

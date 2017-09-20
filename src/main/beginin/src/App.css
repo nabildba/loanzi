@@ -1,24 +1,174 @@
-.App {
+
+html { 
+  background: url(imgs/bg_darkblue.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*{
+  box-sizing: border-box;
+}
+.App{
+  display: grid;
+  grid-template-columns: 1fr;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: #FFFFFF;
+  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;  
+  overflow: hidden;
+  
+}
+
+.App header > *{
+/*  animation: content-entrance 1s linear;
+*/}
+
+.App section {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.App footer{
+  text-align: center;
+  color: #D1C9C9;
+  font-size: 11px;
+}
+
+.App > footer > .status-bar{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.middle h1{
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.middle form{
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(130,130,130,.3);
+  padding: 20px 22px;
+  border: 1px solid;
+  border-top-color: rgba(255,255,255,.4);
+  border-left-color: rgba(255,255,255,.4);
+  border-bottom-color: rgba(60,60,60,.4);
+  border-right-color: rgba(60,60,60,.4);
+  animation: frm-entrance 1s linear;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.middle label{
+  color:rgb(255, 255, 255) !important;
+}
+
+.middle form * {
+  animation: content-entrance 1s linear;   
+}
+
+ul.menu-circles{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+ margin-left: auto;
+ margin-right: auto;
+ width: 780px;
+}
+ul.menu-circles > li{
+  float: left;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+ul.menu-circles li:nth-child(1){
+  background: url(imgs/supports.png) no-repeat center center;
+  animation: circles-entrance1 1500ms ease-out;
+}
+ul.menu-circles li:nth-child(2){
+  animation: circles-entrance2 1500ms ease-out;
+}
+ul.menu-circles li:nth-child(3){
+  background: url(imgs/duplication.png) no-repeat center center;  
+  animation: circles-entrance3 1500ms ease-out;
+}
+
+
+.front, .back {
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  text-align: center;
+  background-color: rgba(130,130,130,.3);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.back{
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transform: scale(0);
+  background-color: rgba(6, 0, 38, 0.80);
   color: white;
 }
-
-.App-intro {
-  font-size: large;
+ul.menu-circles > li:hover .front{
+  border-radius: 20% 50% 50% 50%;
+  transform: scale(1.05);
+}
+ul.menu-circles > li:hover .back{
+  opacity: 1;
+  transform: rotateY(360deg);
+  transform: scale(1);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+@keyframes frm-entrance{
+  0% {transform: scaleY(0)}
+  50%{transform: scaleY(1)}
+  100%{transform: scaleY(1)}
+}
+
+@keyframes content-entrance{
+  0% {opacity: 0}
+  50%{opacity: 0}
+  100%{opacity: 1}
+}
+
+
+@keyframes circles-entrance1 {
+  0% {opacity: 0; transform: translateY(500px)}
+  25% {opacity: 0; transform: translateY(500px)}
+  50%{opacity: 1; transform: translateY(0)}
+  75% {opacity: 1; transform: translateY(0)}
+  100%{opacity: 1; transform: translateY(0)}
+}
+@keyframes circles-entrance2 {
+  0% {opacity: 0; transform: translateY(500px)}
+  25% {opacity: 0; transform: translateY(500px)}
+  50%{opacity: 0; transform: translateY(500px)}
+  75% {opacity: 1; transform: translateY(0)}
+  100%{opacity: 1; transform: translateY(0)}
+}
+@keyframes circles-entrance3 {
+  0% {opacity: 0; transform: translateY(500px)}
+  25% {opacity: 0; transform: translateY(500px)}
+  50%{opacity: 0; transform: translateY(500px)}
+  75% {opacity: 0; transform: translateY(500px)}
+  100%{opacity: 1; transform: translateY(0)}
 }
