@@ -1,0 +1,320 @@
+{
+    "_embedded": {
+    "supportFormats": [
+        {
+            "idSupportFormat": "123",
+            "supportName": "DVCAM34",
+            "duration": 34,
+            "size": "G",
+            "color": "blue",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/123"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/123"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/123/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "124",
+            "supportName": "DVCAM124",
+            "duration": 64,
+            "size": "G",
+            "color": "blue",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/124"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/124"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/124/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "126",
+            "supportName": "DVCAM124",
+            "duration": 124,
+            "size": "G",
+            "color": "blue",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/126"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/126"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/126/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "127",
+            "supportName": "DVCAM184",
+            "duration": 184,
+            "size": "G",
+            "color": "blue",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/127"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/127"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/127/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "132",
+            "supportName": "DVCAM32",
+            "duration": 32,
+            "size": "MINI",
+            "color": "blue",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/132"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/132"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/132/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "84",
+            "supportName": "D40",
+            "duration": 40,
+            "size": "P",
+            "color": "blue",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/84"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/84"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/84/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "85",
+            "supportName": "HD40",
+            "duration": 40,
+            "size": "P",
+            "color": "black",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/85"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/85"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/85/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "86",
+            "supportName": "HD94",
+            "duration": 94,
+            "size": "G",
+            "color": "black",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/86"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/86"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/86/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "87",
+            "supportName": "D94",
+            "duration": 94,
+            "size": "G",
+            "color": "blue",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/87"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/87"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/87/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "88",
+            "supportName": "HD124",
+            "duration": 124,
+            "size": "G",
+            "color": "black",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/88"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/88"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/88/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "89",
+            "supportName": "D124",
+            "duration": 124,
+            "size": "G",
+            "color": "blue",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/89"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/89"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/89/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "92",
+            "supportName": "IMX12",
+            "duration": 12,
+            "size": "P",
+            "color": "green",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/92"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/92"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/92/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "94",
+            "supportName": "IMX32",
+            "duration": 32,
+            "size": "P",
+            "color": "green",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/94"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/94"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/94/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "95",
+            "supportName": "IMX60",
+            "duration": 60,
+            "size": "P",
+            "color": "green",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/95"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/95"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/95/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "97",
+            "supportName": "IMX94",
+            "duration": 94,
+            "size": "G",
+            "color": "green",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/97"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/97"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/97/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "98",
+            "supportName": "IMX124",
+            "duration": 124,
+            "size": "G",
+            "color": "green",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/98"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/98"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/98/supportType"
+                }
+            }
+        },
+        {
+            "idSupportFormat": "99",
+            "supportName": "IMX184",
+            "duration": 184,
+            "size": "G",
+            "color": "green",
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/nayd/supportFormats/99"
+                },
+                "supportFormat": {
+                    "href": "http://localhost:8080/nayd/supportFormats/99"
+                },
+                "supportType": {
+                    "href": "http://localhost:8080/nayd/supportFormats/99/supportType"
+                }
+            }
+        }
+    ]
+},
+    "_links": {
+    "self": {
+        "href": "http://localhost:8080/nayd/supportFormats"
+    },
+    "profile": {
+        "href": "http://localhost:8080/nayd/profile/supportFormats"
+    }
+}
+}
