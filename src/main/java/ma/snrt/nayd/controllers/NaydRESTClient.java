@@ -17,4 +17,8 @@ public class NaydRESTClient {
 	public String home(){
 		return "testing get";
 	}
+	@RequestMapping(value = "/nayd/me", method = RequestMethod.GET)
+	public String me(){
+		return "{currentUser: 'chi hed'}";
+	}
 }

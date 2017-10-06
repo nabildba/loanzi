@@ -1,10 +1,8 @@
 package ma.snrt.nayd.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Entity
 public class SupportType {
@@ -14,7 +12,11 @@ public class SupportType {
 	@NotNull
 	private String supportTypeName;
 	private String usageType;// public or broadcast
-	
+	private String disposition;//bande magnétique or disque
+	private Integer active;
+	@OneToMany(targetEntity=SupportFormat.class, mappedBy="supportType", cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	private List<SupportFormat> supportFormats;
+
 	public SupportType() {
 		// TODO Auto-generated constructor stub
 	}
@@ -49,6 +51,29 @@ public class SupportType {
 	public void setUsageType(String usageType) {
 		this.usageType = usageType;
 	}
-	
-	
+
+
+	public List<SupportFormat> getSupportFormats() {
+		return supportFormats;
+	}
+
+	public void setSupportFormats(List<SupportFormat> supportFormats) {
+		this.supportFormats = supportFormats;
+	}
+
+	public String getDisposition() {
+		return disposition;
+	}
+
+	public void setDisposition(String disposition) {
+		this.disposition = disposition;
+	}
+
+	public Integer getActive() {
+		return active;
+	}
+
+	public void setActive(Integer active) {
+		this.active = active;
+	}
 }

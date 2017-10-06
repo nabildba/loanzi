@@ -18,13 +18,14 @@ public class SupportFormat {
 	private Integer duration;
 	private String size;
 	private String color;
+	private Integer active;
 	
 	public SupportFormat() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public SupportFormat(String idSupportFormat, String supportName, SupportType supportType, Integer duration, String size,
-			String color) {
+			String color, Integer active) {
 		super();
 		this.idSupportFormat = idSupportFormat;
 		this.supportName = supportName;
@@ -32,6 +33,7 @@ public class SupportFormat {
 		this.duration = duration;
 		this.size = size;
 		this.color = color;
+		this.active=active;
 	}
 
 	public String getIdSupportFormat() {
@@ -81,8 +83,13 @@ public class SupportFormat {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	
-	
-	
-	
+
+
+	public Integer getActive() {
+		return active;
+	}
+
+	public void setActive(Integer active) {
+		this.active = active;
+	}
 }

@@ -2,11 +2,13 @@ package ma.snrt.nayd.models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Rubric {
 	@Id
 	private String idRubric;
+	@NotNull
 	private String rubricName;
 	
 	public Rubric() {

@@ -1,320 +1,373 @@
 {
     "_embedded": {
-    "supportFormats": [
-        {
-            "idSupportFormat": "123",
-            "supportName": "DVCAM34",
-            "duration": 34,
-            "size": "G",
-            "color": "blue",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/123"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/123"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/123/supportType"
+        "supportTypes": [
+            {
+                "active": 1,
+                "idSupportType": 1,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
+                "supportTypeName": "MPEG IMX",
+                "supportFormats": [
+                    {
+                        "idSupportFormat": "92",
+                        "supportName": "IMX12",
+                        "duration": 12,
+                        "size": "P",
+                        "color": "green",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "94",
+                        "supportName": "IMX32",
+                        "duration": 32,
+                        "size": "P",
+                        "color": "green",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "95",
+                        "supportName": "IMX60",
+                        "duration": 60,
+                        "size": "P",
+                        "color": "green",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "97",
+                        "supportName": "IMX94",
+                        "duration": 94,
+                        "size": "G",
+                        "color": "green",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "98",
+                        "supportName": "IMX124",
+                        "duration": 124,
+                        "size": "G",
+                        "color": "green",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "99",
+                        "supportName": "IMX184",
+                        "duration": 184,
+                        "size": "G",
+                        "color": "green",
+                        "active": 1
+                    }
+                ],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/nayd/supportTypes/1"
+                    },
+                    "supportType": {
+                        "href": "http://localhost:8080/nayd/supportTypes/1{?projection}",
+                        "templated": true
+                    },
+                    "supportFormats": {
+                        "href": "http://localhost:8080/nayd/supportTypes/1/supportFormats"
+                    }
+                }
+            },
+            {
+                "active": 0,
+                "idSupportType": 2,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
+                "supportTypeName": "BETACAM SP",
+                "supportFormats": [],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/nayd/supportTypes/2"
+                    },
+                    "supportType": {
+                        "href": "http://localhost:8080/nayd/supportTypes/2{?projection}",
+                        "templated": true
+                    },
+                    "supportFormats": {
+                        "href": "http://localhost:8080/nayd/supportTypes/2/supportFormats"
+                    }
+                }
+            },
+            {
+                "active": 1,
+                "idSupportType": 3,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
+                "supportTypeName": "DVCAM",
+                "supportFormats": [
+                    {
+                        "idSupportFormat": "123",
+                        "supportName": "DVCAM34",
+                        "duration": 34,
+                        "size": "G",
+                        "color": "blue",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "124",
+                        "supportName": "DVCAM64",
+                        "duration": 64,
+                        "size": "G",
+                        "color": "blue",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "126",
+                        "supportName": "DVCAM124",
+                        "duration": 124,
+                        "size": "G",
+                        "color": "blue",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "127",
+                        "supportName": "DVCAM184",
+                        "duration": 184,
+                        "size": "G",
+                        "color": "blue",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "132",
+                        "supportName": "DVCAM32",
+                        "duration": 32,
+                        "size": "MINI",
+                        "color": "blue",
+                        "active": 1
+                    }
+                ],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/nayd/supportTypes/3"
+                    },
+                    "supportType": {
+                        "href": "http://localhost:8080/nayd/supportTypes/3{?projection}",
+                        "templated": true
+                    },
+                    "supportFormats": {
+                        "href": "http://localhost:8080/nayd/supportTypes/3/supportFormats"
+                    }
+                }
+            },
+            {
+                "active": 1,
+                "idSupportType": 4,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
+                "supportTypeName": "HDCAM",
+                "supportFormats": [
+                    {
+                        "idSupportFormat": "85",
+                        "supportName": "HD40",
+                        "duration": 40,
+                        "size": "P",
+                        "color": "black",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "86",
+                        "supportName": "HD94",
+                        "duration": 94,
+                        "size": "G",
+                        "color": "black",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "88",
+                        "supportName": "HD124",
+                        "duration": 124,
+                        "size": "G",
+                        "color": "black",
+                        "active": 1
+                    }
+                ],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/nayd/supportTypes/4"
+                    },
+                    "supportType": {
+                        "href": "http://localhost:8080/nayd/supportTypes/4{?projection}",
+                        "templated": true
+                    },
+                    "supportFormats": {
+                        "href": "http://localhost:8080/nayd/supportTypes/4/supportFormats"
+                    }
+                }
+            },
+            {
+                "active": 0,
+                "idSupportType": 5,
+                "usageType": "public",
+                "disposition": "Disque Optique",
+                "supportTypeName": "DVD",
+                "supportFormats": [
+                    {
+                        "idSupportFormat": "1",
+                        "supportName": "DVD-R 4.7GB",
+                        "duration": 120,
+                        "size": "-",
+                        "color": "gray",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "2",
+                        "supportName": "CD-R 700MB",
+                        "duration": 80,
+                        "size": "-",
+                        "color": "red",
+                        "active": 1
+                    }
+                ],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/nayd/supportTypes/5"
+                    },
+                    "supportType": {
+                        "href": "http://localhost:8080/nayd/supportTypes/5{?projection}",
+                        "templated": true
+                    },
+                    "supportFormats": {
+                        "href": "http://localhost:8080/nayd/supportTypes/5/supportFormats"
+                    }
+                }
+            },
+            {
+                "active": 0,
+                "idSupportType": 6,
+                "usageType": "public",
+                "disposition": "Disque Optique",
+                "supportTypeName": "Blu-ray",
+                "supportFormats": [
+                    {
+                        "idSupportFormat": "3",
+                        "supportName": "BD-RE 25GB",
+                        "duration": 150,
+                        "size": "-",
+                        "color": "blue",
+                        "active": 1
+                    }
+                ],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/nayd/supportTypes/6"
+                    },
+                    "supportType": {
+                        "href": "http://localhost:8080/nayd/supportTypes/6{?projection}",
+                        "templated": true
+                    },
+                    "supportFormats": {
+                        "href": "http://localhost:8080/nayd/supportTypes/6/supportFormats"
+                    }
+                }
+            },
+            {
+                "active": 1,
+                "idSupportType": 7,
+                "usageType": "broadcast",
+                "disposition": "Disque Optique",
+                "supportTypeName": "XDCAM DISC",
+                "supportFormats": [
+                    {
+                        "idSupportFormat": "100",
+                        "supportName": "100GB",
+                        "duration": 190,
+                        "size": "-",
+                        "color": "yellow",
+                        "active": 0
+                    },
+                    {
+                        "idSupportFormat": "128",
+                        "supportName": "128GB Write-once",
+                        "duration": 240,
+                        "size": "-",
+                        "color": "white",
+                        "active": 0
+                    },
+                    {
+                        "idSupportFormat": "23",
+                        "supportName": "23GB",
+                        "duration": 43,
+                        "size": "-",
+                        "color": "blue",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "50",
+                        "supportName": "50GB",
+                        "duration": 95,
+                        "size": "-",
+                        "color": "red",
+                        "active": 1
+                    }
+                ],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/nayd/supportTypes/7"
+                    },
+                    "supportType": {
+                        "href": "http://localhost:8080/nayd/supportTypes/7{?projection}",
+                        "templated": true
+                    },
+                    "supportFormats": {
+                        "href": "http://localhost:8080/nayd/supportTypes/7/supportFormats"
+                    }
+                }
+            },
+            {
+                "active": 0,
+                "idSupportType": 8,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
+                "supportTypeName": "DIGITAL Betacam",
+                "supportFormats": [
+                    {
+                        "idSupportFormat": "84",
+                        "supportName": "D40",
+                        "duration": 40,
+                        "size": "P",
+                        "color": "blue",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "87",
+                        "supportName": "D94",
+                        "duration": 94,
+                        "size": "G",
+                        "color": "blue",
+                        "active": 1
+                    },
+                    {
+                        "idSupportFormat": "89",
+                        "supportName": "D124",
+                        "duration": 124,
+                        "size": "G",
+                        "color": "blue",
+                        "active": 1
+                    }
+                ],
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/nayd/supportTypes/8"
+                    },
+                    "supportType": {
+                        "href": "http://localhost:8080/nayd/supportTypes/8{?projection}",
+                        "templated": true
+                    },
+                    "supportFormats": {
+                        "href": "http://localhost:8080/nayd/supportTypes/8/supportFormats"
+                    }
                 }
             }
-        },
-        {
-            "idSupportFormat": "124",
-            "supportName": "DVCAM124",
-            "duration": 64,
-            "size": "G",
-            "color": "blue",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/124"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/124"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/124/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "126",
-            "supportName": "DVCAM124",
-            "duration": 124,
-            "size": "G",
-            "color": "blue",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/126"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/126"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/126/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "127",
-            "supportName": "DVCAM184",
-            "duration": 184,
-            "size": "G",
-            "color": "blue",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/127"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/127"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/127/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "132",
-            "supportName": "DVCAM32",
-            "duration": 32,
-            "size": "MINI",
-            "color": "blue",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/132"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/132"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/132/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "84",
-            "supportName": "D40",
-            "duration": 40,
-            "size": "P",
-            "color": "blue",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/84"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/84"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/84/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "85",
-            "supportName": "HD40",
-            "duration": 40,
-            "size": "P",
-            "color": "black",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/85"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/85"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/85/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "86",
-            "supportName": "HD94",
-            "duration": 94,
-            "size": "G",
-            "color": "black",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/86"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/86"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/86/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "87",
-            "supportName": "D94",
-            "duration": 94,
-            "size": "G",
-            "color": "blue",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/87"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/87"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/87/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "88",
-            "supportName": "HD124",
-            "duration": 124,
-            "size": "G",
-            "color": "black",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/88"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/88"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/88/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "89",
-            "supportName": "D124",
-            "duration": 124,
-            "size": "G",
-            "color": "blue",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/89"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/89"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/89/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "92",
-            "supportName": "IMX12",
-            "duration": 12,
-            "size": "P",
-            "color": "green",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/92"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/92"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/92/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "94",
-            "supportName": "IMX32",
-            "duration": 32,
-            "size": "P",
-            "color": "green",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/94"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/94"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/94/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "95",
-            "supportName": "IMX60",
-            "duration": 60,
-            "size": "P",
-            "color": "green",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/95"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/95"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/95/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "97",
-            "supportName": "IMX94",
-            "duration": 94,
-            "size": "G",
-            "color": "green",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/97"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/97"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/97/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "98",
-            "supportName": "IMX124",
-            "duration": 124,
-            "size": "G",
-            "color": "green",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/98"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/98"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/98/supportType"
-                }
-            }
-        },
-        {
-            "idSupportFormat": "99",
-            "supportName": "IMX184",
-            "duration": 184,
-            "size": "G",
-            "color": "green",
-            "_links": {
-                "self": {
-                    "href": "http://localhost:8080/nayd/supportFormats/99"
-                },
-                "supportFormat": {
-                    "href": "http://localhost:8080/nayd/supportFormats/99"
-                },
-                "supportType": {
-                    "href": "http://localhost:8080/nayd/supportFormats/99/supportType"
-                }
-            }
-        }
-    ]
-},
-    "_links": {
-    "self": {
-        "href": "http://localhost:8080/nayd/supportFormats"
+        ]
     },
-    "profile": {
-        "href": "http://localhost:8080/nayd/profile/supportFormats"
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/nayd/supportTypes?projection=details"
+        },
+        "profile": {
+            "href": "http://localhost:8080/nayd/profile/supportTypes"
+        }
     }
-}
 }

@@ -29,7 +29,7 @@ public class SecuringAppConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/nayd/**").authenticated();
+        //http.authorizeRequests().antMatchers("/nayd/**").authenticated();
         http.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint);
         http.formLogin().successHandler(authenticationSuccessHandler);
         http.formLogin().failureHandler(authenticationFailureHandler);

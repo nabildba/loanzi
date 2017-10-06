@@ -32,13 +32,13 @@ export default class MenuBarTop extends Component {
             {
                 key: 'archive',
                 name: 'Archives',
-                iconProps: { iconName: 'Archive' },
+                iconProps: { iconName: 'Library' },
                 onClick: () => changeCompn('archives'),
             },
             {
                 key: 'dupli',
                 name: 'Duplications',
-                iconProps: { iconName: 'ImageDiff' },
+                iconProps: { iconName: 'BuildQueue' },
                 onClick: () => changeCompn('duplication'),
             },
         ];
@@ -48,13 +48,13 @@ export default class MenuBarTop extends Component {
             {
                 key: 'history',
                 name: 'Historique',
-                icon: 'Chart',
+                iconProps: { iconName: 'Chart' },
                 onClick: this.goHome,
             },
             {
                 key: 'lang',
                 name: 'Langue',
-                icon: 'Flag',
+                iconProps: { iconName: 'Flag' },
                 subMenuProps: {
                     items: [
                         {
@@ -83,7 +83,7 @@ export default class MenuBarTop extends Component {
                     {
                         key: 'deco',
                         name: 'se deconnecter',
-                        iconProps: { iconName: 'SignOut' },
+                        iconProps: { iconName: 'OutOfOffice' },
                         onClick: () => this.props.logout(),
                     },
 

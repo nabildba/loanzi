@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { loadTheme } from 'office-ui-fabric-react/lib/Styling';
+// import { loadTheme } from 'office-ui-fabric-react/lib/Styling';
 
 
 import MenuBarTop from './components/MenuBarTop';
@@ -8,13 +8,14 @@ import MenuCircles from './components/MenuCircles';
 import LoanSupports from './components/LoanSupports';
 // import logo from './logo.svg';
 import './App.css';
+import './styles/cards.css';
 
 
-loadTheme({
-  palette: {
-    themePrimary: 'black',
-  },
-});
+// loadTheme({
+//   palette: {
+//     themePrimary: 'black',
+//   },
+// });
 
 // const API_PATH = '/nayd/';
 
@@ -34,75 +35,68 @@ class App extends Component {
       progress: false,
       compn: 'circles',
     };
-    this.authenticate = this.authenticate.bind(this);
+    this.loggedIn = this.loggedIn.bind(this);
     this.changeView = this.changeView.bind(this);
     this.logout = this.logout.bind(this);
+    this.loading = this.loading.bind(this);
   }
 
   changeView(compn) {
     this.setState({ compn });
   }
-	  //  componentDidMount() {
-	  //       client({ method: 'GET', path: '/api/employees' }).done((response) => {
-	  //           this.setState({ employees: response.entity._embedded.employees });
-	  //       });
-    //   }
+  componentDidMount() {
+    const user = localStorage.getItem('user');
+    if (user) this.loggedIn(user, true);
+  }
+  componentWillUnmount() {
+    localStorage.setItem('tsed', 'ah tsed');
+  }
   logout() {
     this.setState({ user: '', logged: false });
+    localStorage.clear();
   }
     // authentification
-  authenticate(email, pass) {
-    this.setState({ progress: true });
-
-    // setTimeout(() => {
-    //   console.log(pass);
-    //   this.setState({ user: email, logged: true, progress: false });
-    // }, 2000);
-
-    fetch('/login', {
-      method: 'post',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'X-Custom-Header': 'ProcessThisImmediately',
-      },
-      body: `username=${email}&password=${pass}`,
-    })
-    .then((resp) => {
-      if (resp.status === 200) {
-        this.setState({ user: email, logged: true });
-      }
-    })
-    .catch((raison) => { console.log(raison); });
-
-                   /* body: JSON.stringify({
-                      username: email,
-                      password: pass,
-                    }), */
+  loggedIn(user, logged) {
+    this.setState({ user, logged });
+    localStorage.setItem('user', user);
+    this.loading(false);
   }
-
+  loading(progress) {
+    this.setState({ progress });
+  }
   render() {
     // const rows = [];
-    const logged = this.state.logged;
+    const { logged, user, progress } = this.state;
     const Compn = compnList[this.state.compn];
+
     return (
       <div className="App">
+        {progress && <InfoBulle />}
         <header>
           {logged && <MenuBarTop
             changeCompn={this.changeView}
             logout={this.logout}
-            userName={this.state.user}
+            userName={user}
           />}
         </header>
-        <section>
-          {!logged && <LoginForm send={this.authenticate} progress={this.state.progress} />}
+        <div id="contents">
+          {!logged && <LoginForm loggedIn={this.loggedIn} loading={this.loading} />}
           { logged && <Compn changeCompn={this.changeView} />}
-        </section>
+        </div>
         <footer>
-          <div className="status-bar">helloow</div>
+          <div className="status-bar">
+            <img src={require('./imgs/snrt.png')} width="16" alt="snrt_logo" /> &copy;SNRT2017 | Département du patrimoine audiovisuel
+          </div>
         </footer>
       </div>
     );
   }
 }
+
+const InfoBulle = () => (
+  <div className="info-bulle">
+    <span>Chargement en cours ..</span>
+  </div>
+);
 
 export default App;
