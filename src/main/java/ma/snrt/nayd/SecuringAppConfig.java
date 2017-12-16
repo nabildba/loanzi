@@ -3,6 +3,7 @@ package ma.snrt.nayd;
 import ma.snrt.nayd.securing.RESTAuthenticationEntryPoint;
 import ma.snrt.nayd.securing.RESTAuthenticationFailureHandler;
 import ma.snrt.nayd.securing.RESTAuthenticationSuccessHandler;
+import ma.snrt.nayd.securing.UtilisateurService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,6 +16,9 @@ import org.springframework.security.web.csrf.CsrfFilter;
 public class SecuringAppConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
+    UtilisateurService utilisateurService;
+
+    @Autowired
     private RESTAuthenticationEntryPoint authenticationEntryPoint;
     @Autowired
     private RESTAuthenticationFailureHandler authenticationFailureHandler;
@@ -23,8 +27,9 @@ public class SecuringAppConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("nayd").password("lolo").roles("LOANER").and()
-        .withUser("naydnabil").password("momo").roles("ADMIN");
+        auth.userDetailsService(utilisateurService);
+        //auth.inMemoryAuthentication().withUser("nayd").password("lolo").roles("LOANER").and()
+        //.withUser("naydnabil").password("momo").roles("ADMIN");
     }
 
     @Override

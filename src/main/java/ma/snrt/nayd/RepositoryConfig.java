@@ -1,6 +1,7 @@
 package ma.snrt.nayd;
 
 
+import ma.snrt.nayd.models.Document;
 import ma.snrt.nayd.models.Rubric;
 import ma.snrt.nayd.models.SupportFormat;
 import ma.snrt.nayd.models.SupportType;
@@ -19,6 +20,7 @@ public class RepositoryConfig extends
     @Override
     public void configureRepositoryRestConfiguration(
             RepositoryRestConfiguration config) {
-        config.exposeIdsFor(Rubric.class, SupportType.class, SupportFormat.class);
+        config.exposeIdsFor(Rubric.class, SupportType.class, SupportFormat.class
+                    Document.class);
     }
 }

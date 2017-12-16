@@ -183,7 +183,7 @@ ul.menu-circles li:nth-child(3){
   color: #CFCFCF;
 }
 .back > ul{
-  margin-top: 70px;
+  margin-top: 60px;
   padding: Opx;
   text-align: left;
   font-size: 13px;
@@ -203,7 +203,7 @@ ul.menu-circles > li:hover .back{
 }
 .detail-list{
   width: 100%;
-  height: 100px;
+  max-height: 145px;
   overflow-y: auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -253,7 +253,7 @@ ul.menu-circles > li:hover .back{
 }
 
 /********************** FABRIC HACK **********************/
-.errorMessage_f1516672 {
+.ms-TextField-errorMessage {
   background-color: papayawhip !important;
   padding: 3px !important;
 }

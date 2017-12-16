@@ -34,6 +34,15 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
+	public User(User u) {
+		this.name = u.name;
+		this.lastName = u.lastName;
+		this.departement = u.departement;
+		this.email = u.email;
+		this.phone = u.phone;
+		this.phoneIP = u.phoneIP;
+		this.roles = u.roles;
+	}
 
 	public Long getIdUser() {
 		return idUser;

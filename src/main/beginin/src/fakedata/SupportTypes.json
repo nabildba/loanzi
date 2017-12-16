@@ -3,14 +3,11 @@
         "supportTypes": [
             {
                 "active": 1,
-                "idSupportType": 1,
-                "usageType": "broadcast",
-                "disposition": "Bande Magnétique",
                 "supportTypeName": "MPEG IMX",
                 "supportFormats": [
                     {
                         "idSupportFormat": "92",
-                        "supportName": "IMX12",
+                        "supportName": "12MX",
                         "duration": 12,
                         "size": "P",
                         "color": "green",
@@ -18,7 +15,7 @@
                     },
                     {
                         "idSupportFormat": "94",
-                        "supportName": "IMX32",
+                        "supportName": "32MX",
                         "duration": 32,
                         "size": "P",
                         "color": "green",
@@ -26,7 +23,7 @@
                     },
                     {
                         "idSupportFormat": "95",
-                        "supportName": "IMX60",
+                        "supportName": "60MX",
                         "duration": 60,
                         "size": "P",
                         "color": "green",
@@ -34,7 +31,7 @@
                     },
                     {
                         "idSupportFormat": "97",
-                        "supportName": "IMX94",
+                        "supportName": "94MXL",
                         "duration": 94,
                         "size": "G",
                         "color": "green",
@@ -42,7 +39,7 @@
                     },
                     {
                         "idSupportFormat": "98",
-                        "supportName": "IMX124",
+                        "supportName": "124MLX",
                         "duration": 124,
                         "size": "G",
                         "color": "green",
@@ -50,13 +47,16 @@
                     },
                     {
                         "idSupportFormat": "99",
-                        "supportName": "IMX184",
+                        "supportName": "184MXL",
                         "duration": 184,
                         "size": "G",
                         "color": "green",
                         "active": 1
                     }
                 ],
+                "idSupportType": 1,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
                 "_links": {
                     "self": {
                         "href": "http://localhost:8080/nayd/supportTypes/1"
@@ -72,11 +72,11 @@
             },
             {
                 "active": 0,
+                "supportTypeName": "BETACAM SP",
+                "supportFormats": [],
                 "idSupportType": 2,
                 "usageType": "broadcast",
                 "disposition": "Bande Magnétique",
-                "supportTypeName": "BETACAM SP",
-                "supportFormats": [],
                 "_links": {
                     "self": {
                         "href": "http://localhost:8080/nayd/supportTypes/2"
@@ -92,14 +92,11 @@
             },
             {
                 "active": 1,
-                "idSupportType": 3,
-                "usageType": "broadcast",
-                "disposition": "Bande Magnétique",
                 "supportTypeName": "DVCAM",
                 "supportFormats": [
                     {
                         "idSupportFormat": "123",
-                        "supportName": "DVCAM34",
+                        "supportName": "32N",
                         "duration": 34,
                         "size": "G",
                         "color": "blue",
@@ -107,7 +104,7 @@
                     },
                     {
                         "idSupportFormat": "124",
-                        "supportName": "DVCAM64",
+                        "supportName": "64N",
                         "duration": 64,
                         "size": "G",
                         "color": "blue",
@@ -115,7 +112,7 @@
                     },
                     {
                         "idSupportFormat": "126",
-                        "supportName": "DVCAM124",
+                        "supportName": "124N",
                         "duration": 124,
                         "size": "G",
                         "color": "blue",
@@ -123,7 +120,7 @@
                     },
                     {
                         "idSupportFormat": "127",
-                        "supportName": "DVCAM184",
+                        "supportName": "184N",
                         "duration": 184,
                         "size": "G",
                         "color": "blue",
@@ -131,13 +128,16 @@
                     },
                     {
                         "idSupportFormat": "132",
-                        "supportName": "DVCAM32",
+                        "supportName": "M-32N",
                         "duration": 32,
                         "size": "MINI",
                         "color": "blue",
                         "active": 1
                     }
                 ],
+                "idSupportType": 3,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
                 "_links": {
                     "self": {
                         "href": "http://localhost:8080/nayd/supportTypes/3"
@@ -153,14 +153,11 @@
             },
             {
                 "active": 1,
-                "idSupportType": 4,
-                "usageType": "broadcast",
-                "disposition": "Bande Magnétique",
                 "supportTypeName": "HDCAM",
                 "supportFormats": [
                     {
                         "idSupportFormat": "85",
-                        "supportName": "HD40",
+                        "supportName": "40HD",
                         "duration": 40,
                         "size": "P",
                         "color": "black",
@@ -168,7 +165,7 @@
                     },
                     {
                         "idSupportFormat": "86",
-                        "supportName": "HD94",
+                        "supportName": "94HDL",
                         "duration": 94,
                         "size": "G",
                         "color": "black",
@@ -176,13 +173,16 @@
                     },
                     {
                         "idSupportFormat": "88",
-                        "supportName": "HD124",
+                        "supportName": "124HDL",
                         "duration": 124,
                         "size": "G",
                         "color": "black",
                         "active": 1
                     }
                 ],
+                "idSupportType": 4,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
                 "_links": {
                     "self": {
                         "href": "http://localhost:8080/nayd/supportTypes/4"
@@ -198,9 +198,6 @@
             },
             {
                 "active": 0,
-                "idSupportType": 5,
-                "usageType": "public",
-                "disposition": "Disque Optique",
                 "supportTypeName": "DVD",
                 "supportFormats": [
                     {
@@ -220,6 +217,9 @@
                         "active": 1
                     }
                 ],
+                "idSupportType": 5,
+                "usageType": "public",
+                "disposition": "Disque Optique",
                 "_links": {
                     "self": {
                         "href": "http://localhost:8080/nayd/supportTypes/5"
@@ -235,9 +235,6 @@
             },
             {
                 "active": 0,
-                "idSupportType": 6,
-                "usageType": "public",
-                "disposition": "Disque Optique",
                 "supportTypeName": "Blu-ray",
                 "supportFormats": [
                     {
@@ -249,6 +246,9 @@
                         "active": 1
                     }
                 ],
+                "idSupportType": 6,
+                "usageType": "public",
+                "disposition": "Disque Optique",
                 "_links": {
                     "self": {
                         "href": "http://localhost:8080/nayd/supportTypes/6"
@@ -264,10 +264,7 @@
             },
             {
                 "active": 1,
-                "idSupportType": 7,
-                "usageType": "broadcast",
-                "disposition": "Disque Optique",
-                "supportTypeName": "XDCAM DISC",
+                "supportTypeName": "XDCAM",
                 "supportFormats": [
                     {
                         "idSupportFormat": "100",
@@ -302,6 +299,9 @@
                         "active": 1
                     }
                 ],
+                "idSupportType": 7,
+                "usageType": "broadcast",
+                "disposition": "Disque Optique",
                 "_links": {
                     "self": {
                         "href": "http://localhost:8080/nayd/supportTypes/7"
@@ -317,9 +317,6 @@
             },
             {
                 "active": 0,
-                "idSupportType": 8,
-                "usageType": "broadcast",
-                "disposition": "Bande Magnétique",
                 "supportTypeName": "DIGITAL Betacam",
                 "supportFormats": [
                     {
@@ -332,7 +329,7 @@
                     },
                     {
                         "idSupportFormat": "87",
-                        "supportName": "D94",
+                        "supportName": "D94L",
                         "duration": 94,
                         "size": "G",
                         "color": "blue",
@@ -340,13 +337,16 @@
                     },
                     {
                         "idSupportFormat": "89",
-                        "supportName": "D124",
+                        "supportName": "D124L",
                         "duration": 124,
                         "size": "G",
                         "color": "blue",
                         "active": 1
                     }
                 ],
+                "idSupportType": 8,
+                "usageType": "broadcast",
+                "disposition": "Bande Magnétique",
                 "_links": {
                     "self": {
                         "href": "http://localhost:8080/nayd/supportTypes/8"

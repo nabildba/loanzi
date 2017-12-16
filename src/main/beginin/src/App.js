@@ -34,7 +34,7 @@ class App extends Component {
       logged: false,
       progress: false,
       compn: 'circles',
-    };
+    }
     this.loggedIn = this.loggedIn.bind(this);
     this.changeView = this.changeView.bind(this);
     this.logout = this.logout.bind(this);
