@@ -20,7 +20,7 @@ public class RepositoryConfig extends
     @Override
     public void configureRepositoryRestConfiguration(
             RepositoryRestConfiguration config) {
-        config.exposeIdsFor(Rubric.class, SupportType.class, SupportFormat.class
+        config.exposeIdsFor(Rubric.class, SupportType.class, SupportFormat.class,
                     Document.class);
     }
 }
