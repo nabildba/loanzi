@@ -1,5 +1,7 @@
 package ma.snrt.nayd.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -14,6 +16,7 @@ public class SupportType {
 	private String usageType;// public or broadcast
 	private String disposition;//bande magnétique or disque
 	private Integer active;
+	@JsonIgnore
 	@OneToMany(targetEntity=SupportFormat.class, mappedBy="supportType", cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	private List<SupportFormat> supportFormats;
 

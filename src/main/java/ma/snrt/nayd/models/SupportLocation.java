@@ -13,6 +13,7 @@ public class SupportLocation {
     @Id
     private
     String barcode;
+    //TODO let only shelf barcode
     private int armoire;
     private int etagere;
     @ManyToOne

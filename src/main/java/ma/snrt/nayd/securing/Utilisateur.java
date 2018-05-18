@@ -23,7 +23,7 @@ public class Utilisateur extends User implements UserDetails{
     public Collection<? extends GrantedAuthority> getAuthorities() {
         final List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         for (final UserRole privilege : getRoles()) {
-            authorities.add(new SimpleGrantedAuthority(privilege.getRoleName()));
+            authorities.add(new SimpleGrantedAuthority(privilege.getRole().getRoleName()));
         }
         return authorities;
         //return getRoles();

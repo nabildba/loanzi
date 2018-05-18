@@ -31,12 +31,15 @@ public class Loan {
 	@ManyToOne(optional=true)
 	@JoinColumn(name="num_request")
 	private LoanRequest loanRequest;
-	
-	@OneToMany(targetEntity=ArchiveLoan.class, mappedBy="loan")
-	private List<ArchiveLoan> archiveLoans;
-	@OneToMany(targetEntity=SupportLoan.class, mappedBy="loan")
-	private List<SupportLoan> supportLoans;
-	
+
+
+
+	//TODO details Loan
+	@OneToMany(targetEntity=DetailLoan.class, mappedBy="loan")
+	private List<DetailLoan> detailLoans;
+//	@OneToMany(targetEntity=SupportLoan.class, mappedBy="loan")
+//	private List<SupportLoan> supportLoans;
+//
 	
 	public Loan() {
 		// TODO Auto-generated constructor stub
@@ -44,15 +47,15 @@ public class Loan {
 
 
 	public Loan(Long idLoan, Date dateDue, User applicant, User archivist, LoanRequest loanRequest,
-			List<ArchiveLoan> archiveLoans, List<SupportLoan> supportLoans) {
+				List<DetailLoan> detailLoans) {
 		super();
 		this.idLoan = idLoan;
 		this.dateDue = dateDue;
 		this.applicant = applicant;
 		this.archivist = archivist;
 		this.loanRequest = loanRequest;
-		this.archiveLoans = archiveLoans;
-		this.supportLoans = supportLoans;
+		this.detailLoans = detailLoans;
+//		this.supportLoans = supportLoans;
 	}
 
 
@@ -105,26 +108,11 @@ public class Loan {
 		this.loanRequest = loanRequest;
 	}
 
-
-	public List<ArchiveLoan> getArchiveLoans() {
-		return archiveLoans;
+	public List<DetailLoan> getDetailLoans() {
+		return detailLoans;
 	}
 
-
-	public void setArchiveLoans(List<ArchiveLoan> archiveLoans) {
-		this.archiveLoans = archiveLoans;
+	public void setDetailLoans(List<DetailLoan> detailLoans) {
+		this.detailLoans = detailLoans;
 	}
-
-
-	public List<SupportLoan> getSupportLoans() {
-		return supportLoans;
-	}
-
-
-	public void setSupportLoans(List<SupportLoan> supportLoans) {
-		this.supportLoans = supportLoans;
-	}
-	
-	
-	
 }

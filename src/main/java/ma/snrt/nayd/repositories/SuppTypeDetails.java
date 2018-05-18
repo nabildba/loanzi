@@ -1,5 +1,7 @@
-package ma.snrt.nayd.models;
+package ma.snrt.nayd.repositories;
 
+import ma.snrt.nayd.models.SupportFormat;
+import ma.snrt.nayd.models.SupportType;
 import org.springframework.data.rest.core.config.Projection;
 
 import java.util.List;

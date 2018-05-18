@@ -2,13 +2,7 @@ package ma.snrt.nayd.models;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -20,7 +14,9 @@ public class User {
 	@NotNull
 	private String name;
 	private String lastName;
-	private String departement;
+	@ManyToOne
+	@JoinColumn(name="id_department")
+	private Department departement;
 	private String email;
 	private String phone;
 	private String phoneIP;
@@ -74,12 +70,12 @@ public class User {
 	}
 
 
-	public String getDepartement() {
+	public Department getDepartement() {
 		return departement;
 	}
 
 
-	public void setDepartement(String departement) {
+	public void setDepartement(Department departement) {
 		this.departement = departement;
 	}
 

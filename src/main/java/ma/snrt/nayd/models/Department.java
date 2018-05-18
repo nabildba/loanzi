@@ -10,25 +10,25 @@ import javax.validation.constraints.NotNull;
 public class Department {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)	
-	private Integer IdDept;
+	private Integer IdDepartment;
 	@NotNull
 	private String deptName;
-	
+	private Integer loanDuration;
 	public Department() {
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public String toString() {
-		return "Department [IdDept=" + IdDept + ", deptName=" + deptName + "]";
+		return "Department [IdDept=" + IdDepartment + ", deptName=" + deptName + "]";
 	}
 
 	public Integer getIdDept() {
-		return IdDept;
+		return IdDepartment;
 	}
 
-	public void setIdDept(Integer idDept) {
-		IdDept = idDept;
+	public void setIdDept(Integer IdDepartment) {
+		this.IdDepartment = IdDepartment;
 	}
 
 	public String getDeptName() {
@@ -38,6 +38,13 @@ public class Department {
 	public void setDeptName(String deptName) {
 		this.deptName = deptName;
 	}
-	
-	
+
+
+	public Integer getLoanDuration() {
+		return loanDuration;
+	}
+
+	public void setLoanDuration(Integer loanDuration) {
+		this.loanDuration = loanDuration;
+	}
 }

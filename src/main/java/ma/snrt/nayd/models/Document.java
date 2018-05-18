@@ -1,7 +1,9 @@
 package ma.snrt.nayd.models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by nabil on 04/12/2017.
@@ -48,6 +50,10 @@ public class Document {
     private String credit;
     private String rediffs;
     private String subtitle;
+    //lise des supports to test
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Transient
+    private List<String> supports;
 
     public Document() {
     }
@@ -374,5 +380,13 @@ public class Document {
                 ", idTech='" + idTech + '\'' +
                 ", title='" + title + '\'' +
                 '}';
+    }
+
+    public List<String> getSupports() {
+        return supports;
+    }
+
+    public void setSupports(List<String> supports) {
+        this.supports = supports;
     }
 }

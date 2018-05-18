@@ -14,8 +14,9 @@ public class UserRole {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer idUserRole;
-	@NotNull
-	private String roleName;
+	@ManyToOne
+	@JoinColumn(name="id_role")
+	private Role role;
 	@ManyToOne
 	@JoinColumn(name="id_user")
 	private User user;
@@ -24,10 +25,10 @@ public class UserRole {
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserRole(Integer idUserRole, String roleName, User user) {
+	public UserRole(Integer idUserRole, String roleName, Role role) {
 		super();
 		this.idUserRole = idUserRole;
-		this.roleName = roleName;
+		this.role = role;
 		this.user = user;
 	}
 
@@ -39,12 +40,12 @@ public class UserRole {
 		this.idUserRole = idUserRole;
 	}
 
-	public String getRoleName() {
-		return roleName;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
+	public void setRoleName(Role role) {
+		this.role = role;
 	}
 
 	public User getUser() {
